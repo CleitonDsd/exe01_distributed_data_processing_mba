@@ -1,8 +1,12 @@
 # MBA Atividade 01 - Distributed Data Processing 
 <br/>
 
-
 > Você vai prender a utilizar alguns do Hadoop (HDFS) com um dataset que aborda o histórico de alguns modelos da tabela [FIPE](https://veiculos.fipe.org.br/).
+
+Escolhemos o nosso dataset no [Kaggle](https://www.kaggle.com/), é um dataset sobre o histórico de preços da tabela fipe de alguns veículos.
+
+
+<hr>
 
 
 ## Preparando o ambiente 
@@ -63,13 +67,16 @@ Conforme a imagem abaixo:
 
 ## Agora para simplificar, vamos carregar o dataset de forma semi-automatizada
 
-> Mantenha o ambiente em execução, baixe o script 'shellcargafipe.sh', para automatizar o processo, [Baixe aqui.](), e em seguida o execute, o dataset também deverá ser carregado, conforme a imagem abaixo: 
+> Mantenha o ambiente em execução, baixe o script 'shellcargafipe.sh', para automatizar o processo, [Baixe aqui.]([scripts/shellcargafipe.sh](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellcargafipe.sh)), e em seguida o execute, o dataset também deverá ser carregado, conforme a imagem abaixo: 
 
 ![](./executando-script.png)
 
 
 
 ## Criando a estrutura para o Dataset
+
+> Escolhemos essa estrutura para que possamos manter a padronização dos arquivos e conseguir separá-los de acordo com o seu timestampm no nosso caso temos um repositório central que armazena todas as atualizações mensais desse histórico da tabela fipe.
+
 Dentro do Hadoop vamos criar a estrutura para o nosso dataset, conforme a imagem abaixo: 
 
 ![](./criando_estrutura_pastas.PNG)
@@ -91,17 +98,25 @@ hadoop -fs -mkdir /tabelafipe/data/input
 hadoop -fs -mkdir /tabelafipe/data/input/historicaldata
 
 ```
+<br>
+<hr>
+
+### Criando Estrutura de Backup
+
+> Nossa dataset terá a periodicidade de atualização mensal, com isso temos um script (.sh) que deve ser executado para realizar o backup toda vez que existir uma nova atualização na estrutura principal (tabelafipe/data/input/historicaldata/). 
+
+> Com isso, o script realizará o backup dos nossos dataset para o diretório de backup, como estamos num ambiente pseudo-distribuído não conseguimos realizar atividades antes 'disaster-recovery' no momento, mas até que o ambiente permaneça em exceução dos dados atualizados, poderão ser recuperados em caso de uma exclusão e etc. 
+
+
+
+
+
 
 <hr>
 
-## Carregando o dataset para a estrutura de forma manual
-
-
-## Criando o script para o carregamento semi-automatizado 
-
-
-## Entendendo o script 
 
 
 
-## Utilizando o script semi-automatizado
+
+
+
