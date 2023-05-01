@@ -100,23 +100,19 @@ Conforme a imagem abaixo:
 
 ![](./executando-script.png)
 
+<hr>
+<br>
 
-
-### Criando Estrutura de Backup
+### Criando Estrutura e Realizando o Backup
 
 > Nossa dataset terá a periodicidade de atualização mensal, com isso temos um script (.sh) que deve ser executado para realizar o backup toda vez que existir uma nova atualização na estrutura principal (tabelafipe/data/input/historicaldata/). 
 
 > Com isso, o script realizará o backup dos nossos dataset para o diretório de backup, como estamos num ambiente pseudo-distribuído não conseguimos realizar atividades antes 'disaster-recovery' no momento, mas até que o ambiente permaneça em exceução dos dados atualizados, poderão ser recuperados em caso de uma exclusão e etc. 
 
-<hr>
+> Nossos backups serão armazenados na estrutura "tabelafipe/data/input/historicaldata/bkp/", ao executar o 'scripts/shellbackup.sh' ele irá criar a estrutura de backup, caso ela não exista, e irá realizar o backup dos nosso dataset para ela. 
 
-Nossos backups serão armazenados na estrutura "tabelafipe/data/input/historicaldata/", ao executar o 'shellbackup (scripts/shellbackup.sh)[]' ele irá criar a estrutura de backup, caso ela não exista, e irá realizar o backup dos nosso dataset para ela.  
-
-> Mantenha o ambiente em execução, (baixe aqui)[https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellbackup.sh] o script 'shellbackup (scripts/shellbackup.sh)', para automatizar o processo. Em seguida, o adicione a estrurua raiz, conforme fizemos anteriormente e realize a execução, devemos ter o resultado conforme a imagem abaixo com a estrutura criada e com o backup realizado.
+> Mantenha o ambiente em execução, o script 'shellbackup (scripts/shellbackup.sh)' ((baixe aqui)[https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellbackup.sh] ), para automatizar o processo. Em seguida, o adicione a estrurua raiz, conforme fizemos anteriormente e realize a execução, devemos ter o resultado conforme a imagem abaixo com a estrutura criada e com o backup realizado.
 
 
-
-
-
-
+![](./criando_realizando_backup.PNG)
 
