@@ -111,7 +111,10 @@ Conforme a imagem abaixo:
 
 > Nossos backups serão armazenados na estrutura "tabelafipe/data/input/historicaldata/bkp/", ao executar o 'scripts/shellbackup.sh' ele irá criar a estrutura de backup, caso ela não exista, e irá realizar o backup dos nosso dataset para ela. 
 
-> Mantenha o ambiente em execução, o script 'shellbackup', (baixe aqui)[https://www.google.com/], para automatizar o processo. Em seguida, o adicione a estrurua raiz, conforme fizemos anteriormente e realize a execução, devemos ter o resultado conforme a imagem abaixo com a estrutura criada e com o backup realizado.
+> Mantenha o ambiente em execução, o script 'shellbackup', para automatizar o processo. Em seguida, o adicione a estrurua raiz, conforme fizemos anteriormente e realize a execução, devemos ter o resultado conforme a imagem abaixo com a estrutura criada e com o backup realizado.
+
+> Para baixar o shellbackup.sh [clique aqui](https://www.google.com/).
+
 
 <br> 
 
