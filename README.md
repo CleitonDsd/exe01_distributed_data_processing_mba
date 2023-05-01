@@ -113,7 +113,7 @@ Conforme a imagem abaixo:
 
 > Mantenha o ambiente em execução, o script 'shellbackup', para automatizar o processo. Em seguida, o adicione a estrurua raiz, conforme fizemos anteriormente e realize a execução, devemos ter o resultado conforme a imagem abaixo com a estrutura criada e com o backup realizado.
 
-> Para baixar o shellbackup.sh [clique aqui]([https://www.google.com/](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellbackup.sh)).
+> Para baixar o shellbackup.sh [clique aqui](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellbackup.sh).
 
 
 <br> 
