@@ -65,7 +65,7 @@ Conforme a imagem abaixo:
 
 > Mantenha o ambiente em execução, baixe o script 'shellcargafipe.sh', para automatizar o processo, [Baixe aqui.](), e em seguida o execute, o dataset também deverá ser carregado, conforme a imagem abaixo: 
 
-
+![](./executando-script.png)
 
 
 
