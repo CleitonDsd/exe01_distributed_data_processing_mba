@@ -1,2 +1,4 @@
-# exe01_distributed_data_processing_mba.io
-Atividade 01 - DISTRIBUTED DATA PROCESSING &amp; STORAGE
+# MBA Atividade 01 - Distributed Data Processing 
+<br/>
+###Utilizando e automatizando tarefas no HDFS 
+
