@@ -9,7 +9,7 @@
 
 Antes de iniciar, precisamos realizar o download do nosso dataset e enviar ele para o hadoop. 
 
-Realize o download do arquivo [tabela-fipe-01052023.csv]()
+Realize o download do arquivo [dataset-fipe-exemplo.zip](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/raw/main/dataset-fipe-exemplo.zip), dentro desse arquivo compactado temos o 'tabela-fipe-01052023.csv', que será utilizado nos exemplos desse tutorial.
 
 
 
