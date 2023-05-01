@@ -5,7 +5,39 @@
 
 Escolhemos o nosso dataset no [Kaggle](https://www.kaggle.com/), é um dataset sobre o histórico de preços da tabela fipe de alguns veículos.
 
+## Entenda o motivo
+<hr>
 
+Sendo a tabela FIPE como escolha, temos algumas Considerações antes de iniciar.
+
+
+* 1° Principais Dados coletados são: 
+
+- Modelo veículo;
+- Ano Fabricação; 
+- Valor á vista;
+_________
+
+* 2° Como são coletados: 
+
+- Pesquisadores da Fipe colhem dados de concessionárias de todo o Brasil para saber o valor pago à vista pelos veículos e calcular a média de mercado;
+
+_________
+
+* 3° Movimentação:
+
+- A tabela FIPE é atualizada todo dia primeiro de cada mês;
+- Os valores são referente a média de vendas do mês anterior; 
+
+_________
+
+
+- Nossa dataset terá a periodicidade de atualização MENSAL.
+
+Com base nisso, pensamos em estabelecer uma regra que poderíamos enviar os backups acimda de 1 mês para o S3 (Glacier) da Amazon. Mas por conta da viabilidade/capacity optamos por manter os backups em uma estrutura de diretórios diferentes mas dentro da mesma máquina (pseudo-distribuída)
+
+
+<br><br>
 <hr>
 
 
