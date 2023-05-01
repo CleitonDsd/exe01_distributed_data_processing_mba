@@ -19,8 +19,37 @@ Realize o download do arquivo [dataset-fipe-exemplo.zip](https://github.com/Clei
 Não sabe configurar o ambiente docker? [Acesse e aprenda aqui](https://github.com/fabiogjardim/bigdata_docker).
 
 
-
 <hr/>
+
+## Criando a estrutura para o Dataset
+
+> Escolhemos essa estrutura para que possamos manter a padronização dos arquivos e conseguir separá-los de acordo com o seu timestampm no nosso caso temos um repositório central que armazena todas as atualizações mensais desse histórico da tabela fipe.
+
+Dentro do Hadoop vamos criar a estrutura para o nosso dataset, conforme a imagem abaixo: 
+
+![](./criando_estrutura_pastas.PNG)
+
+para isso execute os comandos a seguir, um por vez:
+
+```sh
+hadoop -fs -mkdir /tabelafipe
+```
+```sh
+hadoop -fs -mkdir /tabelafipe/data
+
+```
+```sh
+hadoop -fs -mkdir /tabelafipe/data/input
+
+```
+```sh
+hadoop -fs -mkdir /tabelafipe/data/input/historicaldata
+
+```
+<br>
+<hr>
+
+
 
 ## Carregando o Dataset na estrutura definida (Manualmente)
 
@@ -72,34 +101,6 @@ Conforme a imagem abaixo:
 ![](./executando-script.png)
 
 
-
-## Criando a estrutura para o Dataset
-
-> Escolhemos essa estrutura para que possamos manter a padronização dos arquivos e conseguir separá-los de acordo com o seu timestampm no nosso caso temos um repositório central que armazena todas as atualizações mensais desse histórico da tabela fipe.
-
-Dentro do Hadoop vamos criar a estrutura para o nosso dataset, conforme a imagem abaixo: 
-
-![](./criando_estrutura_pastas.PNG)
-
-para isso execute os comandos a seguir, um por vez:
-
-```sh
-hadoop -fs -mkdir /tabelafipe
-```
-```sh
-hadoop -fs -mkdir /tabelafipe/data
-
-```
-```sh
-hadoop -fs -mkdir /tabelafipe/data/input
-
-```
-```sh
-hadoop -fs -mkdir /tabelafipe/data/input/historicaldata
-
-```
-<br>
-<hr>
 
 ### Criando Estrutura de Backup
 
