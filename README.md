@@ -96,7 +96,7 @@ Conforme a imagem abaixo:
 
 ## Agora para simplificar, vamos carregar o dataset de forma semi-automatizada
 
-> Mantenha o ambiente em execução, baixe o script 'shellcargafipe.sh', para automatizar o processo, [Baixe aqui.]([scripts/shellcargafipe.sh](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellcargafipe.sh)), e em seguida o execute, o dataset também deverá ser carregado, conforme a imagem abaixo: 
+> Mantenha o ambiente em execução, baixe o script 'shellcargafipe.sh' para automatizar o processo, [baixe aqui](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellbackup.sh), e em seguida o execute, o dataset também deverá ser carregado, conforme a imagem abaixo:
 
 ![](./executando-script.png)
 
@@ -111,8 +111,12 @@ Conforme a imagem abaixo:
 
 > Nossos backups serão armazenados na estrutura "tabelafipe/data/input/historicaldata/bkp/", ao executar o 'scripts/shellbackup.sh' ele irá criar a estrutura de backup, caso ela não exista, e irá realizar o backup dos nosso dataset para ela. 
 
-> Mantenha o ambiente em execução, o script 'shellbackup (scripts/shellbackup.sh)' ((baixe aqui)[https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/blob/main/scripts/shellbackup.sh] ), para automatizar o processo. Em seguida, o adicione a estrurua raiz, conforme fizemos anteriormente e realize a execução, devemos ter o resultado conforme a imagem abaixo com a estrutura criada e com o backup realizado.
+> Mantenha o ambiente em execução, o script 'shellbackup', (baixe aqui)[https://www.google.com/], para automatizar o processo. Em seguida, o adicione a estrurua raiz, conforme fizemos anteriormente e realize a execução, devemos ter o resultado conforme a imagem abaixo com a estrutura criada e com o backup realizado.
 
+<br> 
 
 ![](./criando_realizando_backup.PNG)
+
+<hr>
+
 
