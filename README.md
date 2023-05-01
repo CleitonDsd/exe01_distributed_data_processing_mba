@@ -9,26 +9,56 @@
 
 Antes de iniciar, precisamos realizar o download do nosso dataset e enviar ele para o hadoop. 
 
-Realize o download do arquivo [dataset-fipe-exemplo.zip](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/raw/main/dataset-fipe-exemplo.zip), dentro desse arquivo compactado temos o 'tabela-fipe-01052023.csv', que será utilizado nos exemplos desse tutorial.
+Realize o download do arquivo [dataset-fipe-exemplo.zip](https://github.com/CleitonDsd/exe01_distributed_data_processing_mba/raw/main/dataset-fipe-exemplo.zip), dentro desse arquivo compactado temos o 'tabela-fipe-01052023.csv', que será utilizado nos exemplos desse tutorial, realize a extração dele na sua pasta download.
 
-Após baixar o nosso dataset, realize o 'UP' do seu ambiente docker e do 'DataNode', conforme a imagem abaixo: 
-![](./ambiente-em-execucao.png)
-
-
-Para subir o ambiente você pode executar os comandos abaixo: 
-
-```sh
-
-
-```
 
 Não sabe configurar o ambiente docker? [Acesse e aprenda aqui](https://github.com/fabiogjardim/bigdata_docker).
 
 
-```sh
-cp C:/Usuarios/Seu_Usuario/tabela-fipe-01052023.csv
 
+<hr/>
+
+## Carregando o Dataset na estrutura definida
+
+Para realizar essa atividade, é necessário se atentar a os caminhos da sua máquina, no nosso caso estamos utilizando o padrão do Windows, lembre de substituir para o caminho equivalente ao do seu usuário no seu computador.
+
+Vamos realizar o 'UP' do nosso ambiente docker e do namenode
+
+```sh
+docker-compose up -D 
 ```
+
+Certifique-se de que o ambiente está em execução de acordo com a imagem 
+
+![](./ambiente-em-execucao.png)
+
+<hr>
+
+
+Acesse o WSL do seu computador e execute os comando abaixo para levar o nosso dataset para o docker:
+
+```sh
+cp C:/Usuarios/Seu_Usuario/Downloads/tabela-fipe-01052023.csv .
+```
+
+Para acessar o namenode, conforme o comando abaixo
+
+```sh
+docker exec -it namenode bash
+```
+
+Após acessar o name node, vamos copiar o arquivo do docker para o HDFS
+
+```sh
+docker cp tabela-fipe-01052023.csv
+```
+
+
+
+
+
+<hr/>
+
 
 
 
@@ -41,11 +71,28 @@ para isso execute os comandos a seguir, um por vez:
 
 ```sh
 hadoop -fs -mkdir /tabelafipe
+```
+```sh
 hadoop -fs -mkdir /tabelafipe/data
+
+```
+```sh
 hadoop -fs -mkdir /tabelafipe/data/input
+
+```
+```sh
 hadoop -fs -mkdir /tabelafipe/data/input/historicaldata
 
 ```
+
+Conforme a imagem abaixo: 
+
+![](./carregando-dataset-para-ambiente.PNG)
+
+
+
+<hr>
+
 ## Carregando o dataset para a estrutura de forma manual
 
 
