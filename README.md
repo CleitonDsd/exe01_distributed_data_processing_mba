@@ -18,7 +18,7 @@ Não sabe configurar o ambiente docker? [Acesse e aprenda aqui](https://github.c
 
 <hr/>
 
-## Carregando o Dataset na estrutura definida
+## Carregando o Dataset na estrutura definida (Manualmente)
 
 Para realizar essa atividade, é necessário se atentar a os caminhos da sua máquina, no nosso caso estamos utilizando o padrão do Windows, lembre de substituir para o caminho equivalente ao do seu usuário no seu computador.
 
@@ -53,11 +53,18 @@ Após acessar o name node, vamos copiar o arquivo do docker para o HDFS
 docker cp tabela-fipe-01052023.csv
 ```
 
+Conforme a imagem abaixo: 
 
+![](./carregando-dataset-para-ambiente.PNG)
 
 
 
 <hr/>
+
+## Agora para simplificar, vamos carregar o dataset de forma semi-automatizada
+
+> Mantenha o ambiente em execução, baixe o script 'shellcargafipe.sh', para automatizar o processo, [Baixe aqui.](), e em seguida o execute, o dataset também deverá ser carregado, conforme a imagem abaixo: 
+
 
 
 
@@ -84,12 +91,6 @@ hadoop -fs -mkdir /tabelafipe/data/input
 hadoop -fs -mkdir /tabelafipe/data/input/historicaldata
 
 ```
-
-Conforme a imagem abaixo: 
-
-![](./carregando-dataset-para-ambiente.PNG)
-
-
 
 <hr>
 
